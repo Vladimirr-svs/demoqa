@@ -18,6 +18,6 @@ class WebElement:
         except NoSuchElementException:
             return False
         return True
-# new
+        
     def get_text(self):
         return str(self.find_element().text)

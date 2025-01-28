@@ -1,4 +1,4 @@
-from pages.text_box_practice import TextBox  # Импортируем PageObject для страницы
+from pages.text_box_practice import TextBox
 
 
 def test_placeholder_fields(browser):

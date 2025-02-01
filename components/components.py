@@ -49,6 +49,16 @@ class WebElement:
     def get_dom_attribute(self, name: str):
         value = self.find_element().get_dom_attribute(name)
 
+        if value is None:
+            return False
+        if len(value) > 0:
+            return value
+        return True
+
+    def check_css(self, style, value=''):
+        return self.find_element().value_of_css_property(style) == value
+
+
     def scroll_to_element(self):
         self.driver.execute_script(
             'window.scrollTo(0, document.body.scrollHeight);',
@@ -71,3 +81,6 @@ class WebElement:
         else:
             print('Locator type ' + self.locator_type + ' not correct')
         return False
+
+    def is_enabled(self):
+        return self.find_element().is_enabled()

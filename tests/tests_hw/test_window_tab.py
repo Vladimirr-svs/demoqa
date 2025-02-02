@@ -15,4 +15,4 @@ class TestWindowTab:
         page.click_home_link()
         time.sleep(2)
         new_tabs = browser.window_handles
-        assert len(new_tabs) > len(current_tabs), "New tab was not opened"
+        assert len(new_tabs) > len(current_tabs)

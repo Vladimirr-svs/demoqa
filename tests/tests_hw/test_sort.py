@@ -15,4 +15,4 @@ def test_column_sorting(browser):
 
     for header in headers:
         header.click()
-        assert page.is_column_sorted(header), f"Столбец {header.locator} не отсортирован"
+        assert page.is_column_sorted(header)

@@ -22,7 +22,7 @@ def test_check_modal(browser):
     assert modal_page.small_modal_button.exist()
     assert modal_page.large_modal_button.exist()
     modal_page.small_modal_button.click()
-    time.sleep(1)  # Небольшая пауза для появления модального окна
+    time.sleep(1)
     assert modal_page.small_modal.exist()
     modal_page.small_modal_close.click()
     time.sleep(1)  # Даем время закрыться
